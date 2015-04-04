@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SPORTS STOP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-noscript.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="index">
+	
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 id="logo"><a href="index.html">SPORTS <span>STOP</span></a></h1>
+				<nav class="button special">
+									<a href="index-home.jsp" class="button special">HOME</a>
+									<a href="AboutUs.jsp" class="button special">ABOUT US</a>
+									<a href="admin-home.html" class="button special">SEARCH</a>
+									
+									<a href="index.html" class="button special">LOG OUT</a>
+								<!-- <a href="onecolumn.html">One Column</a> -->	
+								</nav>
+			</header>
+
+		<!-- Banner -->		
+			<section id="banner">
+				
+				<!--
+					".inner" is set up as an inline-block so it automatically expands
+					in both directions to fit whatever's inside it. This means it won't
+					automatically wrap lines, so be sure to use line breaks where
+					appropriate (<br />).
+				-->
+				<div class="inner">
+					
+					<header>
+						<h2>WELCOME USER</h2>
+					</header>
+					<p> Please choose from the list of actions below</p>
+							<ul class="buttons vertical">
+							<li><a href="#tracksales" class="button fit scrolly">TRACK/EDIT SALES BY REGION</a></li>
+							
+							<li><a href="#tracksales1" class="button fit scrolly">TRACK/EDIT SALES ORDERS BY STATE</a></li>
+							
+							<li><a href="#main2" class="button fit scrolly">ADD A NEW REGION</a></li>
+							
+							<li><a href="#addnewstore" class="button fit scrolly">ADD A NEW STORE INFO</a></li>
+							
+						</ul>
+					
+				</div>
+				
+				<article id="tracksales">
+
+					
+				<!-- One -->
+					<section class="wrapper style2 container special-alt" style="text-align:center">
+						
+							
+							<form name ="username" action="SearchSalesDataServlet" method="get">
+								<header>	
+										<li>REGION NAME: <input type="text" id="region" name="region" style="width:100% " placeholder="ENTER REGION NAME (SSTP1/SSTP2/SSTP3/SSTP4/SSTP5)"/></li>
+								
+										
+								</header>
+								
+								<footer>
+									<ul>
+										
+										<input type="submit" name="salesregionserach" value="SEARCH SALES">
+										
+										<a href="#" class="button">MAIN MENU</a>	
+									</ul>
+								</footer>
+							
+							</form>
+					</section>
+						
+					
+					
+			</article>
+
+<article id="tracksales1">
+
+					
+				<!-- One -->
+					<section class="wrapper style2 container special-alt" style="text-align:center">
+						
+							
+							<form name ="statesearchname" action="SearchSalesDataServletState" method="get">
+								<header>	
+										
+										<li>STATE NAME: <input type="text" id="state" name="state" style="width:100%" placeholder="ENTER STATE NAME (TEXAS/California/Mass)" /></li>
+										
+								</header>
+								
+								<footer>
+									<ul>
+										
+										<input type="submit" name="salesregionserachstate" value="SEARCH SALES">
+										
+										<a href="#" class="button">MAIN MENU</a>	
+									</ul>
+								</footer>
+							
+							</form>
+					</section>
+						
+					
+					
+			</article>
+
+				
+			<!-- Main -->
+
+
+			<article id="addnewstore">
+		
+				</header>
+					
+				<!-- One -->
+					<section class="wrapper style4 special container 75%" style="background-color:black">
+					<h2>ADD NEW STORE DETAILS</h2>
+					<form action="AddStoreDataServlet" method="GET">
+						<!-- Content -->
+						
+							<div class="content">
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(3)">
+											<input type="text" name="store_region_id" placeholder="REGION ID" />
+										</div>
+										<div class="6u 12u(3)">
+											<input type="text" name="store_state_id" placeholder="STATE ID" />
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="6u 12u(3)">
+											<input type="text" name="storelocation" placeholder="STORE LOCATION" />
+										</div>
+										<div class="6u 12u(3)">
+											<input type="text" name="storeusername" placeholder="USER NAME"/>
+										</div>
+									</div>
+									
+										
+									
+									<div class="row">
+										<div class="12u">
+											<ul class="buttons">
+												<li><input type="submit" class="special" value="ADD STORE DETAIL" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</div>
+							</form>
+					</section>
+				
+			</article>
+			<article id="main2">
+		
+				</header>
+					
+				<!-- One -->
+					<section class="wrapper style4 special container 75%" style="background-color:black">
+					<h2>ADD NEW REGION</h2>
+					<form action="AddNewSalesDataServlet" method="GET">
+						<!-- Content -->
+						
+							<div class="content">
+								<form>
+									<div class="row 50%">
+										<div class="6u 12u(3)">
+											<input type="text" name="region_name" placeholder="REGION NAME (SSTP(no))" />
+										</div>
+										<div class="6u 12u(3)">
+											<input type="text" name="state_id" placeholder="STATE ID(1-CA, 4-TX, 3-MA)" />
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="12u">
+											<ul class="buttons">
+												<li><input type="submit" class="special" value="ADD SALES REGION" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</div>
+							</form>
+					</section>
+				
+			</article>
+				
+<article id="openModal">
+</article>
+			</section>
+</body>
+</html>
